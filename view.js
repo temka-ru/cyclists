@@ -1,5 +1,6 @@
 function start() {
-    startCompetition();
+    stageCount();
+    startCompetition(stageCount);
     result1Place();
     finishCompetition();
     result2Place();
@@ -25,6 +26,12 @@ function result2Place() {
         document.write(place++ + " место " + secondStage[i].country);
         document.write("</br>");
     }
+}
+
+//количество этапов ввод пользователя для первого круга
+function stageCount() {
+    let Q = +prompt('Введите количество этапов:');
+    return Q;
 }
 
 // СТРАНА ПОБЕДИТЕЛЬ
